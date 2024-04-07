@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends "base.html" %}
+{% block content %}
+   <body>
+    <h1>Write</h1>
+      <hr>
+      <div class="content">
+         <form method="post" action="/write">
+            <p>
+               <b><label for="content">Blog</label></b>
+            </p>
+            <p>
+               <label>
+               <input type="text" name="name"
+                  placeholder="Title" size="70px" required>
+               </label>
+            <p></p>
+            <label>
+            <textarea name="content"
+               placeholder="Content" cols="70px" required></textarea>
+            </label>
+            </p>
+            <button type="submit" onclick="return confirm('Blog is published.')">Publish</button>
+             <p></p>
+
+         </form>
+         <p>
+         </p>
+      </div>
+   </body>
+</html>
+      {% endblock %}

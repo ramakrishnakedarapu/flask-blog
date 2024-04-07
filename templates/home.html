@@ -1,0 +1,45 @@
+<!--Homepage template-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet"  href="{{ url_for('static', filename= 'css/home.css' )}}" type="text/css"/> 
+    <script src="https://kit.fontawesome.com/0edc1841a3.js" crossorigin="anonymous"></script>
+    <title>BlogifY</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">BlogifY</label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href='/login'>Login</a></li>
+                <li><a href='/register'>Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="welcome" id="home">
+        <h1>Welcome to BlogifY.</h1>
+    </div>
+    <div  class="content">
+        <h2>Maintain Your Curiosity.</h2><br>
+        <p>Explore the perspectives, ancedotes</p>
+        <p>and knowledge of writers on any subject.</p>
+    </div>
+    <div id="about">
+        <h3>About</h3>
+        <p>Blogify is a lightweight and user-friendly blogging platform designed for users who want to share their thoughts and ideas with others. Built using Flask, a micro web framework for Python, and MongoDB, a NoSQL database, Blogify offers a seamless blogging experience with basic CRUD functionalities.</p><br>
+        <p>Blogify offers a simple yet effective solution for users who want to express themselves through blogging without the complexity of more advanced platforms. With its minimalistic design and essential features, Blogify provides an accessible platform for users to share their ideas and engage with a community of like-minded individuals.</p>
+    </div>
+    <div>
+        <footer> <small>&copy; Copyright 2024, BlogifY. All Rights Reserved</small> </footer>
+    </div>
+</body>
+</html>

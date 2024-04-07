@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends "base.html" %}
+{% block content %}
+   <body>
+    {% for product in product %}
+    <div>
+      <form method="POST" action="/editpost"></form>
+    </div>
+    <div class="product">
+       <p>{{ product['name'] }} <i>({{ product['content']}})</i></p>
+       <form method="POST" action="{{url_for('delete', id=product['_id'])}}">
+          <input type="submit" value ="Delete"
+             onclick="return confirm('Are you sure you want to delete this entry?')">
+       </form>
+       <p></p>
+       <form method="POST" action="{{url_for('edit', id=product['_id'])}}">
+          <label>
+          <input type="text" name="name"
+             placeholder="Title" size="70px" required>
+          </label>
+          <p></p>
+          <label>
+          <textarea name="content"
+             placeholder="Content" cols="70px" required></textarea>
+          </label>
+          <p></p>
+          <input type="submit" value="Edit">
+    </div>
+    </form>
+    {% endfor %}
+   </body>
+</html>
+      {% endblock %}
